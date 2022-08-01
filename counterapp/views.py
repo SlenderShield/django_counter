@@ -9,7 +9,7 @@ from .models import Counter
 def helloworld(request):
     object = Counter.objects.filter(id=1)[0]
     info = {'number': object.number}
-    return render(request, 'helloworld/helloworld.html', info)
+    return render(request, 'counter.html', info)
 
 
 def increment(request):
